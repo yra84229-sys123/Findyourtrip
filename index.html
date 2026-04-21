@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Trip - Cambodia Travel Website</title>
+    <!-- Google Fonts: Outfit & Kantumruy Pro for Khmer text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main View: Home Page -->
+    <main id="home-view" class="view active">
+
+        <!-- Top Navigation Area matching Figma -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">Find Your Trip</span>
+
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>Cambodia Travel Guide</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Header Section (Clean Style) -->
+        <header class="page-header container">
+            <h1>Explore Cambodia</h1>
+            <p class="header-desc">Discover all 25 provinces with their most famous destinations. Click on any province
+                to explore 5 must-visit places.</p>
+
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search provinces...." id="search-input">
+                </div>
+            </div>
+        </header>
+
+        <!-- Provinces Section -->
+        <section class="provinces-section">
+            <div class="container">
+                <div class="provinces-grid" id="provinces-grid">
+                    <!-- Provinces injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Visit Cambodia Section -->
+        <section class="why-visit-section">
+            <div class="container">
+                <div class="why-visit-box">
+                    <h2 class="why-title">Why Visit Cambodia? <span class="kh-badge">KH</span></h2>
+                    <p class="why-desc-en">Cambodia is a land of ancient temples, pristine beaches, lush jungles, and
+                        warm hospitality. From the magnificent Angkor Wat to the vibrant streets of Phnom Penh, each
+                        province offers unique experiences and unforgettable memories.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>25</h3>
+                            <p>Provinces</p>
+                            <span class="stat-kh"></span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>125</h3>
+                            <p>Famous Places</p>
+                            <span class="stat-kh"></span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>1000+</h3>
+                            <p>Attractions</p>
+                            <span class="stat-kh"></span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>2000+</h3>
+                            <p>Years History</p>
+                            <span class="stat-kh"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Tips Section -->
+        <section class="travel-tips-section">
+            <div class="container">
+                <div class="travel-tips-box">
+                    <h2 class="tips-title">Travel Tips • </h2>
+
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-icon"></div>
+                            <h3>Best Time to Visit</h3>
+                            <p>November to February</p>
+                            <span class="tip-kh"></span>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon"></div>
+                            <h3>Currency</h3>
+                            <p>Riel (KHR) & USD</p>
+                            <span class="tip-kh"></span>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-icon"></div>
+                            <h3>Language</h3>
+                            <p>Khmer </p>
+                            <span class="tip-en">English widely spoken</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col brand-col">
+                        <div class="footer-logo">
+                            <div class="logo-icon footer-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <span class="logo-title footer-title">Find Your Trip</span>
+                        </div>
+                        <p class="footer-desc">Discover the best destinations in Cambodia</p>
+                    </div>
+
+                    <div class="footer-col links-col">
+                        <h4>About</h4>
+                        <p>Website showcasing all 25 provinces of Cambodia with their most famous attractions.</p>
+                    </div>
+
+                    <div class="footer-col contact-col">
+                        <h4>Contact</h4>
+                        <p>Made with for Cambodia Tourism</p>
+                        <p class="copyright"> 2026 Find Your Trip</p>
+                    </div>
+
+                    <div class="footer-col back-to-top-col">
+                        <a href="#" class="back-to-top-btn" aria-label="Back to top">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Load Data and Main Script -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
