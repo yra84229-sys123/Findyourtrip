@@ -1,10 +1,15 @@
 :root {
-    --primary: #d9403d; /* Red color matching Figma "Explore Cambodia" and logo */
+    --primary: #d9403d;
+   
     --primary-dark: #b82d2b;
-    --accent: #eab308; /* Yellow map pin */
-    --bg-light: #f7f9fa; /* Very light gray/white background from screenshot */
-    --text-main: #334155; /* Dark slate text for descriptions */
-    --text-khmer: #64748b; /* Lighter slate for khmer translations */
+    --accent: #eab308;
+   
+    --bg-light: #f7f9fa;
+    
+    --text-main: #334155;
+   
+    --text-khmer: #64748b;
+   
     --text-light: #ffffff;
     --card-border: rgba(255, 255, 255, 0.2);
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
@@ -14,7 +19,8 @@
 }
 
 @font-face {
-    font-family: 'Kantumruy Pro'; /* A common clean Khmer font similar to the design */
+    font-family: 'Kantumruy Pro';
+   
     src: url('https://fonts.gstatic.com/s/kantumruypro/v3/KFO9CqoT-W3w-A-o80oWzV4xZ041Xg.woff2') format('woff2');
     font-style: normal;
     font-display: swap;
@@ -40,7 +46,7 @@ body {
     margin: 0 auto;
 }
 
-/* Views Management */
+
 .view {
     display: none;
     opacity: 0;
@@ -54,13 +60,19 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Navbar */
 .navbar {
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     background-color: transparent;
     padding: 24px 0;
     margin-bottom: 40px;
@@ -82,7 +94,8 @@ body {
     width: 48px;
     height: 48px;
     background-color: var(--primary);
-    border-radius: 12px; /* rounded square */
+    border-radius: 12px;
+    /* rounded square */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,10 +124,33 @@ body {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-guide {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: var(--text-khmer);
     font-size: 0.95rem;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-guide:hover {
+    color: var(--primary);
 }
 
 /* Hero Section Home match Figma */
@@ -240,7 +276,7 @@ body {
     font-size: 0.95rem;
     font-weight: 500;
     background-color: #fff9f5;
-    border-top: 1px solid rgba(0,0,0,0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .card-img {
@@ -251,7 +287,8 @@ body {
 }
 
 .province-card:hover .card-img {
-    transform: scale(1.08); /* slight zoom */
+    transform: scale(1.08);
+    /* slight zoom */
 }
 
 .card-overlay {
@@ -286,7 +323,7 @@ body {
     font-weight: 700;
     margin-bottom: 2px;
     transition: var(--transition);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .card-khmer-title {
@@ -374,7 +411,7 @@ body {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
     margin-bottom: 5px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .detail-title-container p {
@@ -438,7 +475,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    border: 1px solid rgba(0,0,0,0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .place-card:hover {
@@ -478,7 +515,7 @@ body {
     border-radius: 50%;
     font-weight: 700;
     font-size: 1.1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .place-info {
@@ -506,7 +543,7 @@ body {
 footer {
     padding: 30px 0;
     text-align: center;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     color: var(--text-khmer);
     font-size: 0.95rem;
 }
@@ -517,18 +554,22 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
+
     .back-btn {
         top: 20px;
         left: 20px;
         padding: 8px 16px;
         font-size: 0.85rem;
     }
+
     .detail-title-container {
         padding: 0 20px;
     }
+
     .provinces-grid {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
+
     .place-hero {
         padding: 40px 30px;
     }
@@ -546,7 +587,8 @@ footer {
     position: relative;
     width: 100%;
     min-height: 400px;
-    background-color: #111827; /* Dark rectangle band */
+    background-color: #111827;
+    /* Dark rectangle band */
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -562,14 +604,16 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.4; /* Dimmed background image matching screenshot */
+    opacity: 0.4;
+    /* Dimmed background image matching screenshot */
     filter: brightness(0.7);
 }
 
 .place-hero-content {
     position: relative;
     z-index: 10;
-    max-width: 800px; /* Align content to left side */
+    max-width: 800px;
+    /* Align content to left side */
 }
 
 .back-link {
@@ -594,7 +638,8 @@ footer {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--accent); /* Yellow pin */
+    color: var(--accent);
+    /* Yellow pin */
     font-weight: 600;
     font-size: 0.95rem;
     margin-bottom: 15px;
@@ -626,7 +671,8 @@ footer {
 .about-section {
     padding: 20px 0 80px;
     display: flex;
-    justify-content: center; /* Centering the text block as seen in screenshot */
+    justify-content: center;
+    /* Centering the text block as seen in screenshot */
 }
 
 .about-content {
@@ -646,7 +692,8 @@ footer {
 }
 
 .about-icon {
-    color: #e88c30; /* Orange 'i' icon */
+    color: #e88c30;
+    /* Orange 'i' icon */
 }
 
 .about-text {
@@ -660,17 +707,19 @@ footer {
    MARKETING / INFO SECTIONS (Why Visit, Travel Tips)
    ======================================================== */
 
-.why-visit-section, .travel-tips-section {
+.why-visit-section,
+.travel-tips-section {
     padding: 0 0 60px;
 }
 
-.why-visit-box, .travel-tips-box {
+.why-visit-box,
+.travel-tips-box {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border-radius: 20px;
     padding: 50px;
     text-align: center;
     box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .why-title {
@@ -716,7 +765,7 @@ footer {
     background: white;
     padding: 30px 20px;
     border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
     transition: var(--transition);
 }
 
@@ -788,7 +837,8 @@ footer {
     margin-bottom: 5px;
 }
 
-.tip-kh, .tip-en {
+.tip-kh,
+.tip-en {
     font-size: 0.9rem;
     color: var(--text-khmer);
     font-family: 'Kantumruy Pro', sans-serif;
@@ -798,7 +848,8 @@ footer {
    MAIN FOOTER
    ======================================================== */
 .main-footer {
-    background-color: #0f172a; /* Dark slate */
+    background-color: #0f172a;
+    /* Dark slate */
     color: #e2e8f0;
     padding: 60px 0 40px;
     border-top: none;
@@ -882,7 +933,8 @@ footer {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background-color: #ea580c; /* Orange matching image */
+    background-color: #ea580c;
+    /* Orange matching image */
     color: white;
     border-radius: 50%;
     text-decoration: none;
@@ -895,10 +947,97 @@ footer {
     transform: translateY(-3px);
 }
 
+/* Contact Section */
+.contact-section {
+    padding: 0 0 60px;
+}
+
+.contact-box {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+    background-color: #ffedd5;
+    color: #ea580c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 65px; /* Align with icon */
+}
+
+.contact-details h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.contact-details p {
+    font-size: 1.1rem;
+    color: var(--text-khmer);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    height: 100%;
+}
+
+.social-links a {
+    color: var(--text-khmer);
+    font-size: 1.4rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ea580c;
+}
+
 @media (max-width: 900px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .contact-grid {
+        gap: 30px;
+    }
+
     .back-to-top-col {
         justify-content: flex-start;
         align-items: flex-start;
@@ -910,7 +1049,14 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    .why-visit-box, .travel-tips-box {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-visit-box,
+    .travel-tips-box,
+    .contact-box {
         padding: 30px 20px;
     }
 }
